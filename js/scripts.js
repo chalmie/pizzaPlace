@@ -3,17 +3,17 @@ function Pizza(selectedSize,selectedToppings) {
   this.selectedToppings = selectedToppings;
 }
 
-// Pizza.prototype.sizeCost = function(selectedSize) {
-//   var sizes = {
-//     personal: 4,
-//     small: 5,
-//     medium: 6,
-//     large: 7
-//   };
-//
-//   return sizes[selectedSize];
-// }
-//
+Pizza.prototype.sizeCost = function(selectedSize) {
+  var sizes = {
+    personal: 4,
+    small: 5,
+    medium: 6,
+    large: 7
+  };
+
+  return sizes[selectedSize];
+}
+
 // Pizza.prototype.toppingsCost = function(selectedToppings) {
 //   var totalToppingsCost = 0;
 //   var toppings = {
