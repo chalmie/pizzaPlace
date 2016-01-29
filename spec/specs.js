@@ -10,10 +10,10 @@ describe('Pizza', function() {
     expect(testPizza.sizeCost("medium")).to.equal(6);
   });
 
-  // // test cost of chosen toppings prototype (toppingsCost)
-  // it('creates a toppingsCost prototype that calculates the selectedToppings cost', function() {
-  //   var testPizza = new Pizza("medium", ["pepperoni","bacon"]);
-  //   expect(testPizza.toppingsCost(["pepperoni","bacon"])).to.equal(2.5);
-  // });
+  // test cost of chosen toppings prototype (toppingsCost)
+  it('creates a toppingsCost prototype that calculates the selectedToppings cost', function() {
+    var testPizza = new Pizza("medium", ["pepperoni","bacon"]);
+    expect(testPizza.toppingsCost(["pepperoni","bacon"])).to.equal(2.5);
+  });
 
 });
