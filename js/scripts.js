@@ -1,3 +1,7 @@
+// =============================
+// Business Logic
+// =============================
+
 function Pizza(selectedSize,selectedToppings) {
   this.selectedSize = selectedSize;
   this.selectedToppings = selectedToppings;
@@ -33,3 +37,7 @@ Pizza.prototype.toppingsCost = function(selectedToppings) {
 
   return totalToppingsCost;
 }
+
+// =============================
+// User Interface Logic
+// =============================
