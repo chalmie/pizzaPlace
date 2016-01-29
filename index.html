@@ -23,6 +23,7 @@
     </div>
     <div class="container-fluid">
       <div class="row">
+        <!-- Ordering column -->
         <div class="col-sm-6 pizza-size">
           <h2>Choose the size!</h2>
           <form role="form">
@@ -38,46 +39,79 @@
             <div class="radio">
               <label><input type="radio" name="optradio1" value="large">Large</label>
             </div>
+
+            <h2>Choose your toppings!</h2>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="pepperoni">
+                Pepporoni
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="sausage">
+                Sausage
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="bacon">
+                Bacon
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="mushrooms">
+                Mushrooms
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="onion">
+                Onion
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="cheese">
+                Extra Cheese
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="squid">
+                Squid
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="shrimp">
+                Shrimp
+              </label>
+            </div>
+            <button type="submit" class="btn btn-info">Add to order</button>
           </form>
         </div>
-
-        <div class="col-sm-6 checkbox">
-          <h2>Choose your toppings!</h2>
-          <label>
-            <input type="checkbox" value="pepperoni">
-            Pepporoni
-          </label>
-          <label>
-            <input type="checkbox" value="sausage">
-            Sausage
-          </label>
-          <label>
-            <input type="checkbox" value="bacon">
-            Bacon
-          </label>
-          <label>
-            <input type="checkbox" value="mushrooms">
-            Mushrooms
-          </label>
-          <label>
-            <input type="checkbox" value="onion">
-            Onion
-          </label>
-          <label>
-            <input type="checkbox" value="cheese">
-            Extra Cheese
-          </label>
-          <label>
-            <input type="checkbox" value="squid">
-            Squid
-          </label>
-          <label>
-            <input type="checkbox" value="shrimp">
-            Shrimp
-          </label>
+        <!-- Receipt/Purchase Column -->
+        <div class="col-md-6">
+          <div id="resultList">
+          <!-- <div class="ticket">
+            <h3 class="movieName"></h3>
+            <p>The movie starts at <span class="movieTime"></span></p>
+            <p class="ticketType"></p>
+            <p>This movie is <span class="isMatinee"></span>a matinee.</p>
+            <p>This ticket costs <span class="cost"></span></p>
+          </div> -->
+          </div>
+          <div id="resultFooter">
+           <p>Total Cost: $<span id="totalCostSpan"></span></p>
+           <button id="resetPage" class="btn btn-danger">Reset</button>
+           <button id="purchaseButton" class="btn btn-success">Purchase</button>
+          </div>
+        </div>
         </div>
 
-        
+
       </div>
     </div>
   </body>
