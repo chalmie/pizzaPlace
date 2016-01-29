@@ -7,7 +7,7 @@ function Pizza(selectedSize,selectedToppings) {
   this.selectedToppings = selectedToppings;
 }
 
-Pizza.prototype.sizeCost = function(selectedSize) {
+Pizza.prototype.sizeCost = function() {
   var sizes = {
     personal: 4,
     small: 5,
@@ -15,10 +15,10 @@ Pizza.prototype.sizeCost = function(selectedSize) {
     large: 7
   };
 
-  return sizes[selectedSize];
+  return sizes[this.selectedSize];
 }
 
-Pizza.prototype.toppingsCost = function(selectedToppings) {
+Pizza.prototype.toppingsCost = function() {
   var totalToppingsCost = 0;
   var toppings = {
     pepperoni: 1,
@@ -31,15 +31,15 @@ Pizza.prototype.toppingsCost = function(selectedToppings) {
     onion: 0.5,
   };
 
-  selectedToppings.forEach(function(topping) {
+  this.selectedToppings.forEach(function(topping) {
     totalToppingsCost += toppings[topping];
   });
 
   return totalToppingsCost;
 }
 
-Pizza.prototype.pizzaCost = function(sizeCost,toppingsCost) {
-  return sizeCost + toppingsCost;
+Pizza.prototype.pizzaCost = function() {
+  return this.sizeCost() + this.toppingsCost();
 }
 
 
@@ -66,10 +66,12 @@ $(document).ready(function() {
     $("input:checkbox:checked").map(function(){
       toppings.push($(this).val());
     });
-
     // create pizza object with user selected size and toppings
     var userPizza = new Pizza(size,toppings);
-    
+    var grandTotal = userPizza.pizzaCost().toFixed(2);
+
+    $('#totalCostSpan').text(grandTotal);
+
 
   });
 });

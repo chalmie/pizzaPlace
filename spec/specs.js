@@ -19,7 +19,7 @@ describe('Pizza', function() {
   // get total cost of pizza
   it('combines size and topping cost to get total pizza cost', function() {
     var testPizza = new Pizza("medium", ["pepperoni","bacon"]);
-    expect(testPizza.pizzaCost(6,2.5)).to.equal(8.5);
+    expect(testPizza.pizzaCost()).to.equal(8.5);
   });
 
 });
